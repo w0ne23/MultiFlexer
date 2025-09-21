@@ -358,3 +358,74 @@ body {
 /* 유틸 */
 .hidden{display:none !important;}
 
+/* 참여자 카드 드래그 상태 */
+.participant.dragging { opacity: .5; }
+
+/* 레이아웃 옵션 드래그 hover */
+.layout-option.layout-hover { background: #008f77; }
+
+/* '참여자 없음' 메시지 (JS 생성용) */
+.no-participants { text-align:center; color:#888; padding:20px; font-style:italic; }
+
+/* 대시보드 '전체보기' 버튼 여백 */
+.dash-participant.all-btn { margin-top: 10px; }
+
+/* 음소거 버튼 상태색 */
+.mute-btn.on  { background:#ff4444; color:#fff; }
+.mute-btn.off { background:#04d2af; color:#fff; }
+
+/* 비디오 슬롯 컨테이너 공통 */
+.slots-container { width:100%; height:100%; padding:10px; box-sizing:border-box; }
+
+/* 레이아웃별 배치 */
+.slots-container.layout-1 { display:flex; }
+.slots-container.layout-2 { display:flex; flex-direction:row; gap:2%; }
+.slots-container.layout-3 { display:flex; flex-direction:row; gap:2%; }
+.slots-container.layout-4 {
+  display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:2%;
+}
+
+/* 레이아웃 내부 슬롯 공통(원래 inline 스타일과 동일 값) */
+.slots-container .slot{
+  width:100%; height:100%;
+  background:transparent;
+  border:2px dashed rgba(255,255,255,1);
+  border-radius:10px;
+  display:flex; justify-content:center; align-items:center;
+  color:#fff; font-weight:bold; box-sizing:border-box;
+}
+.slots-container.layout-2 > .slot { width:49%; height:100%; }
+
+/* 레이아웃3의 좌우 구성 */
+.slots-container.layout-3 .slot-main { width:65%; height:100%; }
+.slots-container.layout-3 .small-slots{
+  width:33%; height:100%; display:flex; flex-direction:column; gap:2%;
+}
+.slots-container.layout-3 .slot-small { width:100%; height:49%; }
+
+/* 슬롯 호버·점유 상태 */
+.slot.is-hover     { background:#0f172a; border:2px dashed #fff; }
+.slot.is-occupied  { background:#0f172a; position:relative; }
+
+/* 슬롯 내부 콘텐츠(원래 inline) */
+.slot-content{
+  text-align:center; position:relative;
+  width:100%; height:100%;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+}
+.slot-avatar{
+  width:60px; height:60px;
+  background:linear-gradient(135deg, #04d2af, #60aaff);
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  color:#fff; font-weight:bold; margin-bottom:10px;
+}
+.slot-name{ color:#fff; font-weight:bold; }
+.slot-remove-btn{
+  background:#ff4444; color:#fff; border:none;
+  border-radius:50%; width:24px; height:24px;
+  position:absolute; top:5px; right:5px;
+  cursor:pointer; font-size:16px;
+  display:flex; align-items:center; justify-content:center;
+}
+
