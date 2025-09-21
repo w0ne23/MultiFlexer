@@ -314,3 +314,47 @@ body {
 
   z-index: 200;           /* dash-left 위에 보이도록 */
 }
+
+/* mic_control.js의 인라인 스타일 → CSS화 */
+.mic-btn.recording {
+  background: #ff4444;
+  box-shadow: 0 2px 8px rgba(255, 68, 68, 0.3);
+}
+.mic-btn.recording:hover {
+  background: #d63a3a;
+}
+
+/* 통계 카드 */
+.stat-entry{
+  color:#000;
+  font-size:14px;
+  margin-bottom:16px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  background:#fff;
+  padding:10px;
+  display:none; /* JS가 보여줄 때만 block */
+}
+.stat-entry strong{display:block;margin-bottom:6px;}
+.chart-canvas{width:100%;height:200px;}
+.stat-text{line-height:1.4}
+
+/* 통계 버튼 그룹 */
+.stat-btn-group{margin:8px 0;}
+.stat-btn{
+  margin-right:6px;
+  padding:4px 8px;
+  border:1px solid #ccc;
+  border-radius:4px;
+  cursor:pointer;
+  background:#f7f7f7;
+}
+.stat-btn:focus{outline:2px solid #04d2af;outline-offset:1px;}
+
+/* 대시보드 토글 버튼 상태 */
+#dashboard-btn.dashboard-toggle{background:#04d2af;}
+#dashboard-btn.dashboard-toggle.is-active{background:#ff4444;}
+
+/* 유틸 */
+.hidden{display:none !important;}
+
