@@ -1,0 +1,57 @@
+= Release v0.2.0 = 
+
+* The following tracers are supported:
+  - Graphic
+  - Framerate
+  - CPU Usage (for GNU/Linux)
+  - Schedule Time
+  - Interlatency
+* Data is logged to:
+  - GStreamer Debug
+  - CTF file
+* A first draft of an Eclipse plugin to plot data
+* Simple GNU/Octave plotting scripts
+
+= Release v0.2.1 =
+
+* Fix for memory bus error on some 32 bit architectures
+
+= Release v0.2.2 =
+
+* Fix bug in octave scripts
+
+= Release v0.2.3 =
+
+* Fix bug where framerate and cpuusage tracer were reporting
+  duplicated results.
+
+= Release v0.4.0 =
+
+* The following tracers have been added:
+  - Bitrate
+  - Identity
+  - Queue Level
+
+= Release v0.4.1 =
+
+* Renamed identity plugin to buffer, to avoid plugin conflict
+
+= Release v0.4.4 =
+
+* Fix bug where interlatency, scheduletime and proctime tracers were having
+  problems due to a race condition.
+
+= Release v0.4.5 =
+
+* Avoid assertions with invalid GstEvents
+
+= Release v0.4.6 =
+
+* Remove Evaluation Version feature
+* Avoid Overflow reading Interlatency Timestamps
+
+= Release v0.4.7 =
+
+* Handle permissions failure writing CTF output files
+* Fix plugin name
+* Avoid sink synchronization pause
