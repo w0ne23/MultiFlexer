@@ -1,4 +1,4 @@
-# Mulitplexer
+# Multiplexer
 > 실시간 디스플레이 공유가 가능한 임베디드 소프트웨어
 ---
 
